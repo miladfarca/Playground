@@ -66,7 +66,8 @@ void kernel_main(void) {
   vga_print_s(VERSION_STRING);
   vga_print_ln(".");
   vga_print_ln("Type 'help' to see a list of commands.");
-  vga_print_ln("Visit https://github.com/miladfarca for more information.");
+  vga_print_ln(
+      "Visit https://github.com/miladfarca/playground for more information.");
   vga_print_ln("Disclaimer: It is possible to damage your machine running "
                "certain instructions. Use at your own risk.");
   vga_print_ln("");
