@@ -9,7 +9,6 @@ void live_draw_screen(int number_emitted_bytes) {
   uint16_t vga_width = coordinates.vga_width;
   int16_t vga_height = coordinates.vga_height;
   int16_t half_screen = (vga_width / 2) - 1;
-  int i;
 
   vga_clear();
 

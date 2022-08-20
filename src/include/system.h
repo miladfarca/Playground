@@ -1,10 +1,11 @@
 #ifndef _SYSTEM_H
 #define _SYSTEM_H
+#include <stdint.h>
 
 struct system_time {
-  char seconds;
-  char minutes;
-  char hours;
+  uint8_t seconds;
+  uint8_t minutes;
+  uint8_t hours;
   char *am_pm;
 };
 

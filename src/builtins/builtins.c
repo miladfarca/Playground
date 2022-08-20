@@ -8,9 +8,10 @@
 #include <stdint.h>
 
 static char *bultin_list[] = {
-    "live:  Live x86 assembler.",
-    "party: Write random characters to the VGA memory buffer.",
-    "time:  Show CMOS time (Hour:Minute:Second)."};
+    "live:   Live x86 assembler.",
+    "party:  Write random characters to the VGA memory buffer.",
+    "random: Print a random 32-bit signed integer.",
+    "time:   Show CMOS time (Hour:Minute:Second)."};
 
 void builtins_show_help() {
   vga_print_s("Playground version ");
@@ -49,5 +50,10 @@ void builtins_time() {
     vga_print_s(" ");
     vga_print_s(time.am_pm);
   }
+  vga_print_ln("");
+}
+
+void builtins_random() {
+  vga_print_i(rand());
   vga_print_ln("");
 }

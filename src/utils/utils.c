@@ -6,12 +6,12 @@
 
 // https://stackoverflow.com/a/7603688
 int32_t rand() {
-  static int lfsr = 0;
+  static int32_t lfsr = 0;
   static int bit = 0;
   if (!lfsr) {
-    // get the current CMOS seconds to be used as seed.
+    // get the current CMOS time to be used as seed.
     struct system_time time = system_get_time();
-    lfsr = time.seconds;
+    lfsr = (time.hours << 16) | (time.minutes << 8) | (time.seconds);
   }
   bit = ((lfsr >> 0) ^ (lfsr >> 2) ^ (lfsr >> 3) ^ (lfsr >> 5)) & 1;
   return lfsr = (lfsr >> 1) | (bit << 15);
