@@ -14,6 +14,7 @@ Anything your hardware allows you to, here are some examples:
 - Overwrite the kernel itself (this will probably cause a triple fault and reboot your machine).
 
 You can also define your own functions or commands, re-build the project and run your code independent of an operating system.
+Note that there is no `libc` available, all there is is your own code. A set of helper functions is available under `src/utils/utils.c`.
 
 ## Features
 Playground provides to following basic features:
@@ -27,6 +28,9 @@ It also includes a shell and builtin programs, use `help` to see a list of them.
 `live` is a builtin program which allows you to run one x86 instruction at a time.
 It also displays the content of a set of registers which get updated every time you run an instruction.
 Instructions are expected to be in Intel syntax. Supported opcodes are listed under `src/builtins/live/opcodes.h`.
+
+Note that `live` is still in development, not all opcodes are currently functional.
+A list of sample instructions is available under `src/builtins/live/sample.S`.
 
 ## Disclaimer
 This project is currently in beta phase which means there are many bugs and unfinished features in the code.
