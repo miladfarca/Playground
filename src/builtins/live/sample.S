@@ -31,3 +31,7 @@ out 97, eax
 in eax, 97
 and eax, 252
 out 97, eax
+
+# divide by zero and cause an exception
+mov ecx, 0
+idiv ecx
