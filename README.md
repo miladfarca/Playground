@@ -26,7 +26,7 @@ It also includes a shell and builtin programs, use `help` to see a list of them.
 
 ## live assembler
 `live` is a builtin program which allows you to run one x86 instruction at a time.
-It also displays the content of a set of registers which get updated every time you run an instruction.
+It also displays the content of a set of registers which gets updated every time you run an instruction.
 Instructions are expected to be in Intel syntax. Supported opcodes are listed under `src/builtins/live/opcodes.h`.
 
 Note that `live` is still in development, not all opcodes are currently functional.
@@ -34,12 +34,12 @@ A list of sample instructions is available under `src/builtins/live/sample.S`.
 
 ## Disclaimer
 This project is currently in beta phase which means there are many bugs and unfinished features in the code.
-Due to lack of any security layers you are totally able to overwrite some vital registers and render your system unusable.
+Due to lack of any security layers you are absolutely able to overwrite some vital registers and render your system unusable.
 
 Use at your own risk.
 
 ## Build and Usage
-Prebuilt ISO images are available under the release tab.
+Prebuilt ISO images are available under *Releases*.
 You can burn the image on a USB stick or CD and boot it on an x86-64 hardware. You can also use Virtual Box or QEMU.
 
 `./build` can be used to compile the project and generate an ISO image, build tools include the following:
