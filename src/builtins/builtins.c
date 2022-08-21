@@ -29,14 +29,12 @@ void builtins_party() {
   struct vga_coordinates coordinates = vga_get_coordinates();
   uint16_t *vga_buffer = coordinates.vga_buffer;
 
-  while (1) {
-    for (int i = 0; i < coordinates.vga_width * coordinates.vga_height; i++) {
-      int32_t r = rand();
-      *(vga_buffer++) = (uint16_t)r;
-    }
-    vga_buffer = coordinates.vga_buffer;
-    sleep(1);
+  for (int i = 0; i < coordinates.vga_width * coordinates.vga_height; i++) {
+    int32_t r = rand();
+    *(vga_buffer++) = (uint16_t)r;
   }
+  vga_set_cursor_at(0, coordinates.vga_height - 1);
+  vga_print_ln("");
 }
 
 void builtins_live() { live_init(); }
