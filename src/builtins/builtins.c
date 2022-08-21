@@ -8,7 +8,7 @@
 #include <stdint.h>
 
 static char *bultin_list[] = {
-    "beep:   Turn Motherboard speakers on for one second."
+    "beep:   Make a beep sound using Motherboard speakers."
     "live:   Live x86 assembler.",
     "party:  Write random characters to the VGA memory buffer.",
     "random: Print a random 32-bit signed integer.",
