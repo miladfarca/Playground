@@ -4,6 +4,20 @@
 #include <stddef.h>
 #include <stdint.h>
 
+void sleep(int32_t seconds) {
+  struct system_time time = system_get_time();
+  uint8_t last_second = time.seconds;
+  int32_t tick = 0;
+  while (1) {
+    time = system_get_time();
+    if (time.seconds != last_second) {
+      last_second = time.seconds;
+      if (++tick >= seconds)
+        break;
+    }
+  }
+}
+
 // https://stackoverflow.com/a/7603688
 int32_t rand() {
   static int32_t lfsr = 0;

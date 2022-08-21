@@ -34,6 +34,7 @@ void builtins_party() {
       *(vga_buffer++) = (uint16_t)r;
     }
     vga_buffer = coordinates.vga_buffer;
+    sleep(1);
   }
 }
 

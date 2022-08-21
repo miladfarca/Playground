@@ -3,6 +3,7 @@
 #define XSTRINGER(V) #V
 #define STRINGER(V) XSTRINGER(V)
 
+void sleep(int32_t seconds);
 int32_t rand();
 int utils_itoa(int32_t value, char *sp, int radix);
 int tolower(int chr);
