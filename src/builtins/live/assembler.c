@@ -24,6 +24,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+// This is a modified version of lass: https://github.com/lazear/lass
+
 #include "../../include/assembler.h"
 #include "../../include/live.h"
 #include "../../include/memory.h"
