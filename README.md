@@ -8,7 +8,7 @@ It's a great tool for exploring bare metal x86 hardware or use it as a base for 
 ## What operations am I allowed to perform?
 Anything your hardware allows you to, here are some examples:
 
-- Write to address 0x0 (NULL address) of your physical memory and read it back.
+- Write to any address of your physical memory and read it back.
 - Write directly to your VGA buffer and see your input characters appear on your screen.
 - Use IN/OUT instructions to access all your ports such as CMOS registers, Serial ports, Motherboard speakers etc.
 - Overwrite the kernel itself (this will probably cause a triple fault and reboot your machine).
