@@ -75,6 +75,6 @@ void kernel_main(void) {
 
   kernel_init_shell();
 
-  // At this point we will hit an infinite loop defined in `boot.s` until
+  // At this point we will hit an infinite loop defined in `boot.S` until
   // an interrupt occurs.
 }
