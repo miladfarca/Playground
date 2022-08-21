@@ -6,5 +6,6 @@ void builtins_party();
 void builtins_live();
 void builtins_time();
 void builtins_random();
+void builtins_beep();
 
 #endif

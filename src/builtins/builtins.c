@@ -8,6 +8,7 @@
 #include <stdint.h>
 
 static char *bultin_list[] = {
+    "beep:   Turn Motherboard speakers on for one second."
     "live:   Live x86 assembler.",
     "party:  Write random characters to the VGA memory buffer.",
     "random: Print a random 32-bit signed integer.",
@@ -57,4 +58,10 @@ void builtins_time() {
 void builtins_random() {
   vga_print_i(rand());
   vga_print_ln("");
+}
+
+void builtins_beep() {
+  system_turn_speaker_on(1000);
+  sleep(1);
+  system_turn_speaker_off();
 }

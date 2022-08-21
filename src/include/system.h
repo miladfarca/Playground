@@ -10,5 +10,7 @@ struct system_time {
 };
 
 struct system_time system_get_time();
+void system_turn_speaker_on(uint32_t nFrequence);
+void system_turn_speaker_off();
 
 #endif

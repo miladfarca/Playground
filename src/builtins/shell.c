@@ -59,6 +59,8 @@ void shell_parse_command() {
       builtins_time();
     } else if (strcmp(buffer, "random") == 0) {
       builtins_random();
+    } else if (strcmp(buffer, "beep") == 0) {
+      builtins_beep();
     } else {
       vga_print_s("Unknown command!");
       vga_print_ln("");
