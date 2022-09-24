@@ -23,6 +23,8 @@ $CC -c src/builtins/live/live.c -o obj/live.o $CFLAGS
 $CC -T src/linker.ld -o obj/kernel.bin -ffreestanding -nostdlib obj/boot.o obj/kernel_as.o obj/kernel.o obj/gdt.o obj/idt.o obj/pic.o obj/system.o obj/memory.o obj/utils.o obj/hal.o obj/keyboard.o obj/vga.o obj/builtins.o obj/shell.o obj/assembler.o obj/live.o -lgcc
 
 # build ISO
+# can be written to a USB drive using:
+# dd if=playground.iso of=/dev/<device name> && sync
 mkdir -p isodir/boot/grub
 cp obj/kernel.bin isodir/boot/playground.bin
 cp grub.cfg isodir/boot/grub/grub.cfg
